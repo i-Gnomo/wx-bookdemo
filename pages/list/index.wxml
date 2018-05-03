@@ -1,0 +1,8 @@
+<!--pages/list/index.wxml-->
+<view wx:for="{{datalist}}" class="listbox">
+  <view class="list-row">
+    <text catchtap="toDetailInfo" class="list-left">{{item.title}}</text>
+    <text catchtap="toAuthorInfo" class="list-rightbox">{{item.author}}</text>
+  </view>
+</view>
+<!--<checkbox checked="{{true}}"></checkbox>-->

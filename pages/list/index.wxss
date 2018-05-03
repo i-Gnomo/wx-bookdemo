@@ -1,0 +1,21 @@
+/* pages/list/index.wxss */
+.listbox{
+  margin: 0 30rpx;
+  margin-top: 10rpx;
+  font-size: 14px;
+}
+.list-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 auto;
+  padding: 20rpx 10rpx;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #cccccc;
+}
+.list-rightbox{
+  color: #cccccc;
+}
