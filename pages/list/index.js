@@ -6,22 +6,32 @@ Page({
    */
   data: {
     datalist:[{
+      "id":'1',
       "title":"平凡的世界",
       "author":"路遥"
     },{
+        "id": '2',
         "title": "晨雨初听",
         "author": "余秋雨"
     },{
-        "title": "我与地坛我与地坛我与地坛我与地坛",
+        "id": '3',
+        "title": "我与地坛",
         "author": "史铁生"
     },{
+        "id": '4',
         "title": "倾城之恋",
         "author": "张爱玲"
     }]
   },
 
-  toDetailInfo: function (){
-    
+  /*
+    跳转到书单详情页 info
+   */
+  toDetailInfo: function (event){
+    var _tid = event.currentTarget.dataset.bookid;
+    wx.navigateTo({
+      url: '../info/index?id=' + _tid
+    })
   },
 
   /**

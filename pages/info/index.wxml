@@ -1,2 +1,12 @@
 <!--pages/info/index.wxml-->
-<text>pages/info/index.wxml</text>
+<view class="info-box">
+  <image class="info-img" src="{{currentbook.coverimg}}" background-size="cover"></image>
+  <view class="info-detail">
+    <text class="info-title">{{currentbook.title}}</text>
+    <text class="info-author">{{currentbook.author}}</text>
+  </view>
+  <text class="info-score">{{currentbook.score}}分</text>
+  <view class="info-content">
+    {{currentbook.binfo}}
+  </view>
+</view>
