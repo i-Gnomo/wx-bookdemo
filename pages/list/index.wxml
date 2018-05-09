@@ -1,7 +1,7 @@
 <!--pages/list/index.wxml-->
 <view wx:key="booklist" wx:for="{{datalist}}" class="listbox">
-  <view class="list-row">
-    <text data-bookid="{{item.id}}" catchtap="toDetailInfo" class="list-left">{{item.title}}</text>
+  <view class="list-row" data-bookid="{{item.id}}" catchtap="toDetailInfo">
+    <text class="list-left">{{item.title}}</text>
     <text catchtap="toAuthorInfo" class="list-rightbox">{{item.author}}</text>
   </view>
 </view>

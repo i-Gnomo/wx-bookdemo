@@ -24,21 +24,11 @@ Page({
     }]
   },
 
-  /*
-    跳转到书单详情页 info
-   */
-  toDetailInfo: function (event){
-    var _tid = event.currentTarget.dataset.bookid;
-    wx.navigateTo({
-      url: '../info/index?id=' + _tid
-    })
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    console.log('list-index', options);
   },
 
   /**
@@ -73,20 +63,41 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    console.log('用户下拉了一下页面');
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+    console.log('上拉触底');
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return {
+      title: "小宣的小程序",
+      path: "/pages/list/index"
+    }
+  },
+
+  /**
+   * 页面滚动触发的事件处理函数
+   */
+  onPageScroll: function(options) {
+    console.log('scrollTop', options.scrollTop);
+  },
+
+  /*
+    跳转到书单详情页 info
+   */
+  toDetailInfo: function (event) {
+    var _tid = event.currentTarget.dataset.bookid;
+    wx.navigateTo({
+      url: '/pages/info/index?id=' + _tid
+    })
   }
+
 })

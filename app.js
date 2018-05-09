@@ -1,6 +1,9 @@
-//app.js
+//app.js 程序注册 
+//逻辑层 App Service
 App({
-  onLaunch: function () {
+  onLaunch: function (options) {
+    console.log('打开小程序的路径', options.path, '打开小程序的场景', options.scene);
+    // 只触发一次
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -47,8 +50,25 @@ App({
         }
       }
     })
+  
+  },
+  onShow: function (options){
+
+  },
+  onHide: function(){
+
+  },
+  onError: function(msg){
+    console.log('errormsg', msg);
+  },
+  onPageNotFound: function(){
+    //当页面找不到时 可以做重定向处理
+    // wx.redirectTo({
+    //   url: '',
+    // })
   },
   globalData: {
+    abc: "abc",
     userInfo: null
   }
 })

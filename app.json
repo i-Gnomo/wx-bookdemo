@@ -7,10 +7,12 @@
     "pages/logs/logs"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "小宣的书单",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#ec695e",
+    "navigationBarTextStyle": "#ffffff",
+    "navigationBarTitleText": "三句半",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false
   },
   "tabBar": {
     "position": "bottom",

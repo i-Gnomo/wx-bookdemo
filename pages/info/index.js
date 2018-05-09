@@ -107,5 +107,10 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  onPageScroll: function (options) {
+    console.log('scrollTop', options.scrollTop);
   }
+  
 })
