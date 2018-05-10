@@ -1,0 +1,42 @@
+var mgic = require("./common.wxs");
+console.log(mgic.FOO);
+console.log(mgic.bar('my mgic'));
+console.log(mgic.msg);
+console.log(mgic.constructor == "Object"); //true
+
+/* 我是注释 */
+
+var a = 10;
+// 自增运算
+// console.log('自增运算', 10 === a++);
+// console.log('自增运算2', 12 === ++a);
+// 自减运算
+// console.log(12 === a--);
+// console.log(10 === --a);
+
+/**
+ * 一元运算符
+ */
+//正值运算 +a
+//负值运算 -a
+
+//NOT否运算
+// console.log(~a); //-11
+
+//void 运算
+// console.log(void a); //undefined
+
+// typeof 运算
+// console.log(typeof a); //number
+
+/**
+ * 位运算符
+ */
+//ECMA 二进制与十进制的转换
+//十进制转二进制
+
+
+
+/**
+ * 二元逻辑运算符
+ */

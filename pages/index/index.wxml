@@ -1,4 +1,33 @@
 <!--index.wxml-->
+<!--使用 weixin script小程序脚本语言-->
+<wxs module="m1">
+  /* 我是注释 */
+  //console.log('xiaoxuanxuan');
+  var msg = 'let it be';
+  module.exports.message = msg;
+</wxs>
+<wxs module="arraymax">
+  var getMax = function(array){
+  var max = undefined;
+    for(var i=0;i<array.length;i++){
+      max = (max === undefined) ? array[i] : (max >= array[i] ? max : array[i]);
+    }
+    return max;
+  }
+  module.exports.getMax = getMax;
+</wxs>
+<!--使用 weixin script-->
+<view>{{m1.message}} and the max number is {{arraymax.getMax(arrayDt)}}</view><br/>
+
+<!--引用 wxs模块-->
+<wxs src="./../common.wxs" module="tools"/>
+<view>{{tools.FOO}}{{tools.bar(tools.FOO)}}</view>
+
+<wxs src="./../magic.wxs" module="mgic" />
+
+
+
+<!--获取微信用户头像昵称等个人信息-->
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
@@ -12,3 +41,10 @@
     <text class="user-motto" wx:else>{{motto}} World</text>
   </view>
 </view> 
+<!--<view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="i">
+  <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="j">
+    <view wx:if="{{i <= j}}">
+      {{i}} * {{j}} = {{i * j}}
+    </view>
+  </view>
+</view>-->

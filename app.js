@@ -53,7 +53,13 @@ App({
   
   },
   onShow: function (options){
-
+    //获取系统信息
+    wx.getSystemInfo({
+      success: res => {
+        //小程序客户端基础库版本
+        console.log('res.SDKVersion:',res.SDKVersion);
+      },
+    })
   },
   onHide: function(){
 

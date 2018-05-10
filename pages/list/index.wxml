@@ -1,8 +1,21 @@
 <!--pages/list/index.wxml-->
-<view wx:key="booklist" wx:for="{{datalist}}" class="listbox">
+<!-- <include src="../index/header.wxml"/> -->
+
+<!--自定义模板-->
+<template name="everybook">
+  <view class="list-row" data-bookid="{{id}}" catchtap="toDetailInfo">
+    <text class="list-left">{{title}}</text>
+    <text catchtap="toAuthorInfo" class="list-rightbox">{{author}}</text>
+  </view>
+</template>
+
+<view wx:key="unique" wx:for="{{datalist}}" class="listbox">
   <view class="list-row" data-bookid="{{item.id}}" catchtap="toDetailInfo">
     <text class="list-left">{{item.title}}</text>
     <text catchtap="toAuthorInfo" class="list-rightbox">{{item.author}}</text>
   </view>
+  <template is="everybook" data="{{...item}}"></template>
 </view>
 <!--<checkbox checked="{{true}}"></checkbox>-->
+<!--<block> </block>-->
+<!--<block/> 并不是一个组件，它仅仅是一个包装元素，不会在页面中做任何渲染，只接受控制属性。-->

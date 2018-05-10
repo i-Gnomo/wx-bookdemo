@@ -8,19 +8,23 @@ Page({
     datalist:[{
       "id":'1',
       "title":"平凡的世界",
-      "author":"路遥"
+      "author":"路遥",
+      "unique": "unique_1"
     },{
         "id": '2',
         "title": "晨雨初听",
-        "author": "余秋雨"
+        "author": "余秋雨",
+        "unique": "unique_2"
     },{
         "id": '3',
         "title": "我与地坛",
-        "author": "史铁生"
+        "author": "史铁生",
+        "unique": "unique_3"
     },{
         "id": '4',
         "title": "倾城之恋",
-        "author": "张爱玲"
+        "author": "张爱玲",
+        "unique": "unique_4"
     }]
   },
 
@@ -35,7 +39,8 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    console.log('this.route is', this.route);
+    //pages/list/index
   },
 
   /**
@@ -94,6 +99,7 @@ Page({
     跳转到书单详情页 info
    */
   toDetailInfo: function (event) {
+    console.log(event);
     var _tid = event.currentTarget.dataset.bookid;
     wx.navigateTo({
       url: '/pages/info/index?id=' + _tid
