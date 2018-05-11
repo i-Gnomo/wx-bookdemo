@@ -22,6 +22,11 @@ var a = 10;
 
 //NOT否运算
 // console.log(~a); //-11
+// 先将a转为二进制 然后取反 再转为十进制
+// 或者也可以理解为对数字求负 然后再减一
+var c = -20;
+console.log(~c); // = (-c)-1
+
 
 //void 运算
 // console.log(void a); //undefined
@@ -34,6 +39,26 @@ var a = 10;
  */
 //ECMA 二进制与十进制的转换
 //十进制转二进制
+var b = 100;
+var b_2 = b.toString(2);
+console.log(b_2); //1100100
+//二进制转十进制
+var b_3 = parseInt(b_2, 2);
+console.log(b_3); //100
+//左移运算 <<
+var d = -2;
+var d_2 = d<<5;
+console.log(d_2);
+//有符号右移运算 >>
+var e = 100;
+var e1 = -100;
+console.log(e>>5); //3
+console.log(e1>>5); //4
+//无符号右移运算 >>>
+var f = 100;
+var f1 = -100;
+console.log(f >>> 5); //3
+console.log(f1 >>> 5); //134217724
 
 
 
