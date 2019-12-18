@@ -2,12 +2,12 @@
 <!-- <include src="../index/header.wxml"/> -->
 
 <!--自定义模板-->
-<template name="everybook">
+<!-- <template name="everybook">
   <view class="list-row" data-bookid="{{id}}" catchtap="toDetailInfo">
     <text class="list-left">{{title}}</text>
     <text catchtap="toAuthorInfo" class="list-rightbox">{{author}}</text>
   </view>
-</template>
+</template> -->
 
 <view wx:key="unique" wx:for="{{datalist}}" class="listbox">
   <view class="list-row" data-bookid="{{item.id}}" catchtap="toDetailInfo">

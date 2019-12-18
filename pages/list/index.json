@@ -1,6 +1,6 @@
 {
   "navigationBarBackgroundColor": "#000000",
-  "navigationBarTextStyle": "#ffffff",
+  "navigationBarTextStyle": "white",
   "navigationBarTitleText": "书单",
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light"

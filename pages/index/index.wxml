@@ -17,11 +17,11 @@
   module.exports.getMax = getMax;
 </wxs>
 <!--使用 weixin script-->
-<view>{{m1.message}} and the max number is {{arraymax.getMax(arrayDt)}}</view><br/>
+<!-- <view>{{m1.message}} and the max number is {{arraymax.getMax(arrayDt)}}</view> -->
 
 <!--引用 wxs模块-->
 <wxs src="./../common.wxs" module="tools"/>
-<view>{{tools.FOO}}{{tools.bar(tools.FOO)}}</view>
+<!-- <view>{{tools.FOO}}{{tools.bar(tools.FOO)}}</view> -->
 
 <wxs src="./../magic.wxs" module="mgic" />
 
